@@ -1,4 +1,4 @@
-import {PORT} from "./config/userConfig.js";
+import {PORT, SOCKET} from "./config/userConfig.js";
 import {userService} from "./config/appConfig.js";
 import express, {Request, Response, NextFunction} from 'express';
 import {apiRouter} from "./routes/apiRoutes.js";
@@ -30,7 +30,7 @@ export const launchServer = () => {
 
 
     const server = app.listen(PORT, () => {
-        console.log(`server running at http://localhost:${PORT}`);
+        console.log(`server running at :${SOCKET}`);
     });
 
 

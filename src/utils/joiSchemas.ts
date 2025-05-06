@@ -7,7 +7,7 @@ export const postBodySchema: ObjectSchema<Post> = Joi.object({
     userId: Joi.number().positive().min(1).max(100).required(),
     title: Joi.string(),
     text: Joi.string(),
-})
+}).prefs({convert:false})
 export const userIdParamSchema = Joi.object({
     userId: Joi.string().pattern(/^\d+$/).required()
 });
